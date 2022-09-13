@@ -433,20 +433,25 @@ header .icons #menu-bars{
     margin-left: 1rem;
     font-size: 2.5rem;
 }
+
+
 input[type=text] {
-    border: 1px solid rgba(0, 0, 0, 0.377);
+    /* border: 1px solid rgba(0, 0, 0, 0.377); */
     /* border-radius: 2px; */
     height: 2em;
+    width: 100%;
+    
   }
 table {
     /* font-family: arial, sans-serif; */
     border-collapse: collapse;
     width: 100%;
     margin: 0%;
+   
   }
   
   td, th {
-    border: 1px solid #dddddd;
+    border: 2px solid #dddddd;
     text-align: left;
     padding: 8px;
   }
@@ -466,7 +471,67 @@ table {
 }
 
 
+.title{
+    font-size: 50px;
+    text-align: center;
+    margin-top: 80px;
+    margin-bottom: 40px;
+    /* text-decoration: underline 4px; */
+}
 
+
+.questions-container{
+    max-width: 800px;
+    margin: 0 auto;
+    border: 1px solid white;
+    padding:.5rem ;
+    background-color: #fff;
+    
+}
+.questions-container h2 {
+    font-size: 30px;
+    padding: .5em;
+}
+
+.question{
+    border-bottom: 1px solid #fff;
+}
+.question button{
+    width: 100%;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 15px;
+    border:none;
+    outline: none;
+    font-size: 22px;
+    color: rgba(0, 0, 0, 0.63);
+    font-weight: 700;
+    cursor: pointer;
+}
+.question p{
+    font-size: 22px;
+    max-height: 0;
+    opacity: 0;
+    line-height: 1.5;
+    overflow: hidden;
+    transition: all 0.6s ease;
+}
+.d-arrow{
+    transition: transform 0.5s ease-in ;
+    color: rgba(71, 34, 119, 0.582);
+}
+
+/*add this class when click*/
+.question p.show{
+    max-height: 200px; 
+    opacity: 1;
+    padding:0px 15px 30px 15px;
+}
+.question button .d-arrow.rotate{
+    transform: rotate(180deg);
+}
 
 
 

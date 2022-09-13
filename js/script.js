@@ -1,5 +1,6 @@
 let menu = document.querySelector('#menu-bars');
 let navbar = document.querySelector('.navbar');
+let buttons = document.querySelectorAll('button');
 
 menu.onclick = () =>{
   menu.classList.toggle('fa-times');
@@ -78,10 +79,19 @@ function tableSearch() {
             tr[i].style.display = "none";
         }
     }
+  }
 }
 
+// const buttons = document.querySelectorAll('button');
 
-}
+buttons.forEach( button =>{
+    button.addEventListener('click',()=>{
+        const faq = button.nextElementSibling;
+        const icon = button.children[1];
 
+        faq.classList.toggle('show');
+        icon.classList.toggle('rotate');
+    })
+} )
 
 window.onload = fadeOut;
